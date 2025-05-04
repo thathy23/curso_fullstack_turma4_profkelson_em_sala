@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Mensagem = () => {
+const Mensagem = (props) => {
 
     const exibirTipo = (tipo) => {
         if(tipo === "sucesso"){
-            return <h1>Operacao com sucesso</h1>
+            return <h1>Operacao com sucesso!</h1>
         }else if(tipo === "erro"){
-            return <h2>algo deu Erro</h2>            
-        }else if(tipo === "Aviso"){
+            return <h2>algo deu Errado!</h2>            
+        }else if(tipo === "aviso"){
             return <h3>Atencao verifique dados</h3>
         }else{
             return <h4>Tipo de mensagem inválida</h4>
@@ -16,11 +16,8 @@ const Mensagem = () => {
 
   return (
     <div>
-        {exibirTipo("sucesso")}
-        {exibirTipo("erro")}
-        {exibirTipo("Aviso")}
-        {exibirTipo()}
-        
+        {exibirTipo(props.tipo)}
+      
     </div>
   )
 }

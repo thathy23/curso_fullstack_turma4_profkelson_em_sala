@@ -1,13 +1,16 @@
 import React from 'react'
-import TrabalhandoComImagensCondicionais from './components/TrabalhandoComImagensCondicionais'
-
+import Mensagem from './components/Mensagem'
 
 
 const App = () => {
   return (
     <div>
-      <TrabalhandoComImagensCondicionais />  
-    
+      
+      <Mensagem tipo="sucesso" />
+      <Mensagem tipo="erro" />
+      <Mensagem tipo="aviso" />
+      <Mensagem tipo="outro" />
+             
     </div>
   )
 }
